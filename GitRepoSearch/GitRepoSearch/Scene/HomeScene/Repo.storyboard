@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ODu-4N-8a1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repo Search Controller-->
+        <scene sceneID="OWk-cq-jXT">
+            <objects>
+                <viewController id="ODu-4N-8a1" customClass="RepoSearchController" customModule="GitRepoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4OE-xe-Krf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e9P-M0-pke">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="vQ8-Bj-d9d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UsW-Nz-CQ7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e9P-M0-pke" firstAttribute="leading" secondItem="UsW-Nz-CQ7" secondAttribute="leading" id="DGQ-jy-pPt"/>
+                            <constraint firstItem="e9P-M0-pke" firstAttribute="top" secondItem="4OE-xe-Krf" secondAttribute="top" id="XZi-ba-w5c"/>
+                            <constraint firstAttribute="bottom" secondItem="e9P-M0-pke" secondAttribute="bottom" id="b0O-sH-a0q"/>
+                            <constraint firstItem="e9P-M0-pke" firstAttribute="trailing" secondItem="UsW-Nz-CQ7" secondAttribute="trailing" id="l1q-3N-67v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="u9Q-bc-7qD" id="xp8-I1-VWx"/>
+                        <outlet property="tableView" destination="e9P-M0-pke" id="NsA-tW-05v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K10-03-ias" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" placeholder="Type your query here..." id="u9Q-bc-7qD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </objects>
+            <point key="canvasLocation" x="-330.43478260869568" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
